@@ -5,7 +5,7 @@ on:
     branches: [main]             # Khi push vào nhánh chính
   pull_request:
     branches: [main]             # Khi có Pull Request tới nhánh chính
-  schedule:
+
               # Scan định kỳ vào thứ Hai lúc 08:00 UTC
 
 jobs:
