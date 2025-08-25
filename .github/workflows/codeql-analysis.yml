@@ -1,0 +1,39 @@
+name: "CodeQL Security Scan"
+
+on:
+  push:
+    branches: [main]             # Khi push vào nhánh chính
+  pull_request:
+    branches: [main]             # Khi có Pull Request tới nhánh chính
+  schedule:
+    - cron: '0 8 * * 1'          # Scan định kỳ vào thứ Hai lúc 08:00 UTC
+
+jobs:
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write     # Phải có quyền này để upload kết quả scan
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['javascript-typescript']  # Phân tích theo ngôn ngữ, có thể thêm languages khác
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+          queries: +security-extended       # Sử dụng bộ query mở rộng về security
+
+      - name: Autobuild (nếu cần)
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
