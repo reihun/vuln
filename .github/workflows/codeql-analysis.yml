@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [main]             # Khi có Pull Request tới nhánh chính
   schedule:
-    - cron: '0 8 * * 1'          # Scan định kỳ vào thứ Hai lúc 08:00 UTC
+              # Scan định kỳ vào thứ Hai lúc 08:00 UTC
 
 jobs:
   analyze:
