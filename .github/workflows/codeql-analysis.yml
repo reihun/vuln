@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: ['javascript-typescript']  # Phân tích theo ngôn ngữ, có thể thêm languages khác
+        language: ['javascript-typescript-python-java']  # Phân tích theo ngôn ngữ, có thể thêm languages khác
 
     steps:
       - name: Checkout repository
