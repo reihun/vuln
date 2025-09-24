@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!-- Author: DuND3@fpt.com -->
+<!-- Description: Popup editor, be informed that the generated CSS working well on Whatfix and UniDAP only. -->
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/popup_editor.css">
+	<link rel="stylesheet" href="css/popup_template.css">
+	<script src="/apps/Studio/js/common_funcs.js"></script>
+	<script src="/apps/Studio/js/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+
+<body>
+
+	<div class="control_pannel">
+		<button class="reset" style="margin-right: 50px;">Reset</button>
+		<button class="generate">Generate</button>
+		<button class="save" style="margin-right:40px">Save Changes</button>
+		<button class="importFromClipboard">Import from Clipboard</button>
+		<button class="whatfix_css">Copy Whatfix-CSS</button>
+		<div class="configuration" style="margin-left:40px">W: <input id="confWidth" type="number" min="200" max="700"
+				value="600">(px) H: <input id="confHeight" type="number" min="200" max="700" value="0">(px)</div>
+	</div>
+
+	<div class="mainlayout">
+		<div class="pageSelection">
+			<div class="pageSelectionContent">
+				Select page:
+				<select id="page_selection">
+				</select>
+				Back button action:
+				<select id="action_selection">
+					<option value="-1">--None--</option>
+				</select><br>
+				<button class="delete_page" style="width:100px">Delete Page</button>
+				<button class="add_page" style="width:100px">Add Page</button><br>
+				<button class="add_tab" style="width:100px">Add Tab</button>
+			</div>
+		</div>
+		<div class="layout" id="local">
+			<div class="template" style="display:none;">
+				<ul class="unidap_popup_single_tab">
+					<li class="unidap_popup_tab">
+						<label style="background:#4a83fd !important;">⯉ <input type="text"
+								style="width: calc(100% - 150px); background:transparent;border:none;color:#fff;"
+								value="New Tab"></input>
+							<div class="controls">
+								<select class="tab_type">
+									<option value="none">---None---</option>
+								</select>
+								<div class="delete_tab">DELETE</div>
+							</div>
+						</label>
+						<div id="local_unidap_popup_tab_contentX" class="unidap_popup_content"></div>
+					</li>
+				</ul>
+				<div class="unidap_popup_pages"><input type="radio" name="local_unidap_popup_pages"
+						id="unidap_popup_page_local_X">
+					<ul class="unidap_popup_tabs"></ul>
+					<div class="pre_page">-1</div>
+				</div>
+			</div>
+		</div>
+		<div class="layout" id="result">
+			<div id="toolbar" style="position:fixed;top:42px;z-index:2;"></div>
+			<div class="popup">
+				<div class="header">
+					<div style="display:flex;padding-top:9px;padding-left:10px">[<a id="searchOnWhatfix" href="#"
+							style="max-width: 70%; overflow: hidden;text-wrap: nowrap;text-overflow: ellipsis;"></a>]
+						<div id="copyPopupName" style="margin-top:-2px; cursor:pointer">🗐</div><button
+							id="copy_clipboard"
+							style="height: 25px;margin-top: -4px;position:absolute; right:20px;">Copy Content</button>
+					</div>
+				</div>
+				<div id="popup_body"></div>
+				<div class="template">
+					<ul class="unidap_popup_single_tab">
+						<li class="unidap_popup_tab">
+							<input type="checkbox" id="unidap_popup_tabX" checked="true">
+							<label for="unidap_popup_tabX"></label>
+							<div id="unidap_popup_tab_contentX" class="unidap_popup_content"></div>
+						</li>
+					</ul>
+					<div class="unidap_popup_pages"><input type="radio" name="unidap_popup_pages"
+							id="unidap_popup_pageX">
+						<ul class="unidap_popup_tabs"></ul>
+						<div class="unidap_popup_footer"><label>Back</label></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="clipboard_data" style="display:none;"></div>
+	</div>
+	<div id="tinymce_popup">
+		Link to page:
+		<select>
+			<option value="-1">--None--</option>
+		</select>
+		<button class="change_link">OK</button>
+		<button class="change_link_cancel">Cancel</button>
+	</div>
+	<div id="workflow_selection">
+		Start a Workflow:
+		<select>
+			<option value="-1">--None--</option>
+		</select>
+		<button class="change_link">OK</button>
+		<button class="change_link_cancel">Cancel</button>
+	</div>
+	<div id="popup_selection">
+		Open a Popup:
+		<select>
+			<option value="-1">--None--</option>
+		</select>
+		<button class="change_link">OK</button>
+		<button class="change_link_cancel">Cancel</button>
+	</div>
+	<div id="backdrop"></div>
+	<script src="/apps/Studio/js/lz-string-144.js"></script>
+	<script src="js/popup_editor.js"></script>
+	<script src="../../js/const.js"></script>
+	<script src="../../values/content_list.js"></script>
+</body>
+
+</html>

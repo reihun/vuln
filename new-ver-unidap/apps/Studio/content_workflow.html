@@ -1,0 +1,167 @@
+<div class="view">
+    <div class="line data">
+        <canvas></canvas>
+        <div class="language_selector_container floating-right">
+            <i class='fa fa-language' aria-hidden='true'></i>
+            <select id="workflow_language_selector"></select>
+        </div>
+        <div class="start">
+            <div class="icon">Start</div>
+            <button class="more"><i class="fa fa-plus"></i></button>
+        </div>
+        
+    </div>
+    <div class="template">
+        <div class="step">
+            <!-- <canvas></canvas> -->
+            <div class="content">
+                <input class="name" value="" placeholder="Name the step..."></input>
+            </div>
+            <div class="detail template">
+                <div class="footer">
+                    <button class="save"><i class="fa fa-save"></i> OK</button>
+                </div>
+                <div class="title"><input class="name" value="" placeholder="Name the step..."></input></div>
+                <div class="dialog">
+                    <div class="header">
+                        <span class="basic">Basic</span>
+                        <span class="advanced">Advanced</span>
+                    </div>
+                    <div class="Basic">
+                        <div class="line">
+                            <span>Tooltip content</span>
+                            <div class="step_tooltip_editor editor"></div>
+                        </div>
+                        <div class="line">
+                            <div>
+                                <span class="selector">Selector</span>
+                            </div>
+                            <textarea class="editor"></textarea><button class="search"><i class="fa fa-search"
+                                    aria-hidden="true"></i></button>
+                        </div>
+                        <div class="line tool">
+                        </div>
+                        <div class="line main_path">
+                            <div class="pannel">
+                                Path:
+                            </div>
+                            <div class="pannel custom_path_pannel">
+                                <div class="line">
+                                    <span>Customize path:</span>
+                                    <select class="path_operator">
+                                        <option value="equals" selected>Equals</option>
+                                        <option value="contains" selected>Contains</option>
+                                        <option value="not_contain">Not Contain</option>
+                                        <option value="starts_with">Starts With</option>
+                                        <option value="ends_with">Ends With</option>
+                                        <option value="regex">Regex</option>
+                                        <option value="wildcard" selected>Wildcard (?|*)</option>
+                                    </select>
+                                </div>
+                                <div class="line path"><input type="text" value="/*"></input></div>
+                            </div>
+                        </div>
+                        <div class="line frame_path">
+                            <div class="pannel">
+                                Frame:
+                            </div>
+                            <div class="pannel custom_path_pannel">
+                                <div class="line">
+                                    <span>Customize frame path:</span>
+                                    <select class="path_operator">
+                                        <option value="none" selected>[None]</option>
+                                        <option value="equals" selected>Equals</option>
+                                        <option value="contains" selected>Contains</option>
+                                        <option value="not_contain">Not Contain</option>
+                                        <option value="starts_with">Starts With</option>
+                                        <option value="ends_with">Ends With</option>
+                                        <option value="regex">Regex</option>
+                                        <option value="wildcard">Wildcard (?|*)</option>
+                                    </select>
+                                </div>
+                                <div class="line path"><input type="text"></input></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Advanced">
+
+                        <div class="when block">
+                            <div class="header">When</div>
+                            <div class="content">
+                                <select class="when_condition">
+                                    <option value="page_view">Page View</option>
+                                    <option value="per_call" selected>Per Call</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="where block">
+                            <div class="header">Where</div>
+                        </div>
+                        <div class="location block">
+                            <div class="header">Location</div>
+                            <div class="content">
+                                <div class="line">
+                                    <div><input type="checkbox" class="force_to_change_location">Force to change
+                                        location
+                                        to:</input></div>
+                                    <div>
+                                        <input class="url"></input><button class="search"><i class="fa fa-search"
+                                                aria-hidden="true"></i></button>
+                                    </div>
+                                    <div>(This url will be used to identify the step to be executed as well)</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="completion_rules block">
+                            <div class="header">Step Completion Rule(s)</div>
+                            <div class="content">
+                                <div class="line">
+                                    <div>Completion Method:
+                                        <select class="key completion_trigger">
+                                            <option value="manual">Manual</option>
+                                            <option value="automated">Automated</option>
+                                        </select>
+                                    </div>
+                                    <div class="line">
+                                        <div>Completion Rule:
+                                            <select class="operator manual">
+                                                <option value="click_next" selected>Clicked on [Next] button</option>
+                                                <option value="click_element">Clicked on selected element</option>
+                                                <option value="change_value">Changes on selected element</option>
+                                            </select>
+                                            <select class="operator automated">
+                                                <option value="click" selected>Auto Click</option>
+                                                <option value="hover" selected>Auto Hover</option>
+                                                <option value="select">Auto Select</option>
+                                                <option value="input">Auto input</option>
+                                            </select>
+                                            <input class="value select input" placeholder="Enter value"></input>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="others block">
+                            <div class="header">More options</div>
+                            <div class="content">
+                                <div class="line">
+                                    <div><input type="checkbox" class="useFixedWidth"></input>Width: <input type="number" class="tooltipFixedWidth" value="500"></input>(px)</div>
+                                </div>
+                                <div class="line">
+                                    <div><input type="checkbox" class="tooltipFixedPosision"></input> Fixed Position</div>
+                                </div>
+                                <div class="line">
+                                    <div><input type="checkbox" class="display_title"></input> Display Title</div>
+                                </div>
+                                <div class="line">
+                                    <div><input type="checkbox" class="make_it_spotlight" checked></input>Spotlight
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

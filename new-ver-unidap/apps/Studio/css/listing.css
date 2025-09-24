@@ -1,0 +1,319 @@
+.fa {
+    vertical-align: middle;
+}
+
+.listing .header .buttons,
+.listing .pathname .contents .data .item .row2 .button,
+body>.header div:nth-child(2) {
+    position: absolute;
+    right: 0
+}
+
+.listing .pathname .contents .data .item .row2 .button {
+    right: 10px;
+    display: flex;
+    column-gap: 10px;
+}
+
+body {
+    background: #1f2641;
+    color: #fff;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    overflow: hidden;
+}
+
+input,
+select {
+    background: 0 0;
+    border: none;
+    border-bottom: 1px solid #47a3e3;
+    color: inherit
+}
+
+select option {
+    color: black;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+button {
+    color: #fff;
+    border-radius: 4px;
+    /* background: #2975e6;
+    border: 1px solid #5097ff; */
+    min-width: 25px;
+    height: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+}
+
+button:hover {
+        filter: none;
+        cursor: pointer;
+        /* box-shadow: 4px 8px 8px hsl(0deg 0% 0% / .38); */
+        background: #2975e6
+    }
+
+input,
+select {
+    height: 20px
+}
+
+body>.header {
+    margin: 8px;
+    position: relative;
+    display: flex;
+}
+
+:is(body > .header) button.token {
+        opacity: 0.3;
+    }
+
+:is(:is(body > .header) button.token):hover {
+            opacity: 1;
+        }
+
+.listing {
+    height: calc(100dvh - 126px);
+    overflow: hidden;
+    margin: 0 8px;
+}
+
+.listing:hover {
+        overflow: auto;
+        margin: 0 3px 0 8px
+    }
+
+.listing::-webkit-scrollbar {
+        width: 5px
+    }
+
+.listing::-webkit-scrollbar-thumb {
+        background: #a1a8b4;
+        border-radius: 10px
+    }
+
+.listing .domain {
+        background: #c8d5ff87;
+        padding: 5px 5px 0;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #224964;
+        color: #2c344e;
+    }
+
+.lv1:is(:is(.listing .domain) .header) {
+                margin-bottom: 5px;
+            }
+
+.lv1:is(:is(.listing .domain) .header) .buttons {
+                    height: 20px;
+                }
+
+:is(:is(.listing .domain) .header) button.new_content {
+                font-size: xx-small;
+                background: green;
+                display: flex;
+                align-items: center;
+                column-gap: 5px;
+                opacity: 0.4;
+            }
+
+:is(:is(:is(.listing .domain) .header) button.new_content):hover {
+                    opacity: 1;
+                }
+
+:is(.listing .domain) .pathname {
+            background: #e4eaff4f;
+            padding: 5px;
+            margin-bottom: 10px;
+            border-radius: 0 0 5px 5px;
+            color: #2c344e;
+        }
+
+:is(:is(.listing .domain) .pathname) .contents .type {
+                background: #1f2641;
+                padding: 5px;
+                margin-bottom: 10px;
+                border-radius: 0 0 5px 5px;
+                color: #fff;
+            }
+
+:is(:is(:is(.listing .domain) .pathname) .contents .type) .data {
+                    background: #3f4b6f;
+                    padding: 5px;
+                    border-radius: 0 0 5px 5px
+                }
+
+.listing .header {
+        position: relative;
+        height: 25px;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+    }
+
+:is(.listing .header) .buttons {
+            display: flex;
+            background: 0 0;
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            column-gap: 5px
+        }
+
+.lv1:is(.listing .header) span {
+            max-width: 275px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+:is(.lv1:is(.listing .header) span) i{
+                color: #41549c;
+            }
+
+.lv2:is(.listing .header) span {
+            max-width: 315px;
+            right: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+.path_operator:is(.lv2:is(.listing .header) span) {
+                border: 1px solid #6c90d2;
+                border-radius: 20px;
+                background: #8cb4ff;
+                color: #0036ff;
+                margin: 0 3px 0 0;
+                padding: 2px;
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                font-size: x-small;
+            }
+
+.filter, .tenant {
+    background: #3746733b;
+    padding: 5px 5px 2px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+:is(.filter,.tenant) .line {
+        display: flex;
+        margin: 5px 0;
+        column-gap: 10px;
+    }
+
+:is(:is(.filter,.tenant) .line)  > div {
+            width: 40%;
+            column-gap: 5px;
+            display: flex;
+            align-items: center
+        }
+.tenant_select {
+    min-width: 100px;
+}
+
+
+.collapsed,
+.template {
+    display: none
+}
+
+.expanded {
+    display: block
+}
+
+.listing .pathname .contents .data .item {
+    margin-bottom: 5px;
+}
+
+:is(.listing .pathname .contents .data .item):first-child button.up {
+            display: none;
+        }
+
+:is(.listing .pathname .contents .data .item):last-child button.down {
+            display: none;
+        }
+
+:is(.listing .pathname .contents .data .item)  > div {
+        display: flex;
+        column-gap: 5px;
+    }
+
+:is(.listing .pathname .contents .data .item) .col1 {
+        display: flex;
+    }
+
+:is(:is(.listing .pathname .contents .data .item) .col1) span {
+            border: 1px solid #9ba2c2;
+            background: #9ba2c2;
+            padding: 0 2px;
+            border-radius: 3px;
+            min-width: 16px;
+            text-align: center
+        }
+
+:is(.listing .pathname .contents .data .item) .col2 {
+        display: flex;
+        align-items: center
+    }
+
+:is(.listing .pathname .contents .data .item) .row2 {
+        display: none;
+        position: relative;
+        padding: 5px 0 5px;
+    }
+
+:is(:is(.listing .pathname .contents .data .item) .row2) .col2 {
+            background: #ffffff17;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+:is(:is(.listing .pathname .contents .data .item) .row2) button {
+            border-radius: 0;
+            width: 35px;
+            opacity: 0.4;
+        }
+
+:is(:is(:is(.listing .pathname .contents .data .item) .row2) button):hover {
+                opacity: 1;
+            }
+
+:is(.listing .pathname .contents .data .item):hover span {
+        color: #7fffd4
+    }
+
+.popup_template {
+    display: none;
+}
+
+:is(#popup .server_conf,#popup .site_info)  > div {
+            display: grid;
+            margin-bottom: 10px;
+        }
+
+:is(:is(#popup .server_conf,#popup .site_info) > div) div {
+                display: flex;
+                align-items: center;
+            }
+
+.ml-auto {
+    margin-left: auto;
+}

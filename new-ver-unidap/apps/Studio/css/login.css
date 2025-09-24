@@ -1,0 +1,72 @@
+input {
+    background: 0 0;
+    border: none;
+    border-bottom: 1px solid #47a3e3;
+    color: inherit;
+    width: 100%;
+    margin: 10px 0;
+    height: 25px;
+}
+button {
+    min-width: 60px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 5px;
+    color: #fff;
+    border-radius: 4px;
+    background: #2975e6;
+    border: 1px solid #5097ff;
+    margin: 10px;
+    cursor: pointer;
+}
+select {
+    min-width: 100px;
+}
+.login_container {
+    background-color: #ffffffad;
+    color: #0f226a;
+    backdrop-filter: blur(4px);
+    width: calc(100% - 40px);
+    height: fit-content;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+html,body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_body {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.login_body .item{
+        width: 100%;
+    }
+.login_header {
+    margin-top: 0;
+}
+.login_description {
+    margin: 0;
+    align-self: flex-start;
+}
+.checking_status{
+    font-size: larger;
+    font-weight: 500;
+}
+#endpoint, #ssoEndpoint, .login_btn {
+    font-size: 14px;
+}

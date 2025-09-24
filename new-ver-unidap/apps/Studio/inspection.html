@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+  <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="css/inspection.css">
+  <link rel="stylesheet" href="css/dialog.css">
+  <link rel="stylesheet" href="css/context_menu.css">
+
+  <link rel="stylesheet" href="css/workflow.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/useraction.css">
+  <link rel="stylesheet" href="css/smarttip.css">
+  <link rel="stylesheet" href="css/popup.css">
+  <link rel="stylesheet" href="css/tooltip.css">
+  <link rel="stylesheet" href="css/custom_content.css">
+
+  <link rel="stylesheet" href="template/popup_multiple_nested_tab_pages/css/popup_template.css">
+  <script src="js/tinymce/js/tinymce/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="js/less.js"></script>
+</head>
+
+<body spellcheck="false">
+  <div class="container">
+    <div class="header">
+      <span class="site"></span>
+      <div class="buttons">
+        <button class="cancel"><i class="fa fa-window-close"></i>Cancel</button>
+      </div>
+      <div class="general_info main_path">
+        <div class="pannel">
+          Path:
+          <select class="pathname">
+            <option value="custom">[Custom]</option>
+          </select>
+        </div>
+        <div class="pannel custom_path_pannel">
+          <div class="line">
+            <span>Customize path:</span>
+            <select class="path_operator">
+              <option value="equals" selected>Equals</option>
+              <option value="contains" selected>Contains</option>
+              <option value="not_contain">Not Contain</option>
+              <option value="starts_with">Starts With</option>
+              <option value="ends_with">Ends With</option>
+              <option value="regex">Regex</option>
+              <option value="wildcard">Wildcard (?|*)</option>
+            </select>
+            <div class="buttons">
+              <!-- <button class="check"><i class="fa fa-certificate" aria-hidden="true"></i> Check</button> -->
+              <button class="save"><i class="fa fa-check" aria-hidden="true"></i> Update</button>
+            </div>
+          </div>
+          <div class="line content_name new_path"><input type="text"></input></div>
+        </div>
+      </div>
+
+      <div class="general_info frame_path">
+        <div class="pannel">
+          Frame:
+          <select class="pathname">
+            <option value="none">[None]</option>
+            <option value="custom">[Custom]</option>
+          </select>
+        </div>
+        <div class="pannel custom_path_pannel">
+          <div class="line">
+            <span>Customize path:</span>
+            <select class="path_operator">
+              <option value="equals" selected>Equals</option>
+              <option value="contains" selected>Contains</option>
+              <option value="not_contain">Not Contain</option>
+              <option value="starts_with">Starts With</option>
+              <option value="ends_with">Ends With</option>
+              <option value="regex">Regex</option>
+              <option value="wildcard">Wildcard (?|*)</option>
+            </select>
+            <div class="buttons">
+              <button class="save"><i class="fa fa-check" aria-hidden="true"></i> Update</button>
+            </div>
+          </div>
+          <div class="line content_name new_path"><input type="text"></input></div>
+        </div>
+      </div>
+
+      <div class="control_detail content_name_pannel">
+        <div class="content_name">
+          <span>Name:</span><input type="text" maxlength="70"></input>
+        </div>
+        <div class="multilang_selector_container">
+            <i class='fa fa-language' aria-hidden='true'></i>
+            <select id="multilang_name"></select>
+        </div>
+      </div>
+
+    </div>
+    <div class="tabs_header">
+      <div class="tab_header" tab="path_builder">Path builder</div>
+      <div class="tab_header" tab="content_builder">Content</div>
+      <div class="tab_header" tab="visibility_builder">Display Rules</div>
+      <button class="collapse"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></button>
+      <button class=" expand hide"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></button>
+    </div>
+    <div class="builders">
+      <!-- <div class="builder path_builder">
+      </div> -->
+      <path-builder class="builder path_builder" preview="true"></path-builder>
+      <div class="builder content_builder">Type:
+        <select class="content">
+          <option value="none">[None]</option>
+        </select>
+        <button class="preview"><i class="fa fa-eye"></i> Preview</button>
+      </div>
+      <div class="builder visibility_builder">
+        <div class="when block">
+          <div class="header">When</div>
+          <div class="content">
+            <div class="schedule">
+              <p>Period(s):</p>
+              <div class="periods"></div>
+              <button class="more"><i class="fa fa-plus"></i></button>
+              <div class="movable period template">
+                <div class="remove_item">
+                  <button class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+                </div>
+                <div class="line start_time">
+                  <div>Start On</div>
+                  <div>
+                    <div class="calendar"><input type="date" class="start_on"></input></div>
+                  </div>
+                  <div><select class="start time"></select></div>
+                  <div><button class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>
+                </div>
+                <div class="line end_time">
+                  <div>End On</div>
+                  <div>
+                    <div class="calendar"><input type="date" class="end_on"></input></div>
+                  </div>
+                  <div><select class="end time"></select></div>
+                  <div><button class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button></div>
+                </div>
+              </div>
+            </div>
+            <div class="repeat">
+              <p>Repeat:</p>
+              <div class="line">
+                <div><input type="radio" name="repeat" value="until" checked>Until</input></div>
+                <div><input type="number" class="occurences" value="0"></input></div>
+                <div>Occurences<span>(0 = Forever)</span></div>
+              </div>
+              <div class="line">
+                <div><input type="radio" name="repeat" value="custom">Custom</input></div>
+                <div>
+                  <select class="recurrence">
+                    <option value="once_daily">Once Daily</option>
+                    <option value="weekday">Weekday (Monday to Friday)</option>
+                    <option value="once_a_week">Once a Week</option>
+                    <option value="once_a_month">Once a Month</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="where block">
+          <div class="header">Where</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  
+  <script src="js/const.js"></script>
+  <script src="js/common_funcs.js"></script>
+  <script src="js/context_menu.js"></script>
+
+  <script src="js/workflow.js"></script>
+  <script src="js/smarttip.js"></script>
+  <script src="js/hint.js"></script>
+  <script src="js/custom_content.js"></script>
+  <script src="js/button.js"></script>
+  <script src="js/popup.js"></script>
+  <script src="js/tooltip.js"></script>
+  <script src="js/useraction.js"></script>
+
+  <script src="js/dialog.js"></script>
+
+  <script src="tools/js/path_builder.js"></script>
+  <script src="tools/js/tag_viewer.js"></script>
+  <script src="values/tag_list.js"></script>
+  <script src="values/user_attributes.js"></script>
+  <script src="values/content_list.js"></script>
+  <script src="utils/js/where_condition.js"></script>
+  <script src="utils/js/content_editor.js"></script>
+  <script src="js/inspection.js"></script>
+  <script src="js/initiate.js"></script>
+
+</body>
+
+</html>

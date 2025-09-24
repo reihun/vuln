@@ -1,0 +1,93 @@
+<div class="conditions">
+</div>
+<button class="more"><i class="fa fa-plus"></i></button>
+<div class="template line record movable">
+    <div class="remove_item"><button class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+    </div>
+    <div class="method">
+        <select class="connector">
+            <option value="and" selected>And</option>
+            <option value="or">Or</option>
+        </select>
+        <select class="method">
+            <option value="none" selected>[None]</option>
+            <option value="select_tag">Tag</option>
+            <option value="context">Context</option>
+            <option value="value_validation">Inner Value</option>
+            <option value="uri">URI</option>
+            <option value="selector">Selector</option>
+            <option value="user_attr">User Attribute</option>
+            <option value="user_action">User Action</option>
+            <option value="salesforce_obj">Salesforce Objects</option>
+            <option value="workday_obj">Workday Objects</option>
+        </select>
+
+    </div>
+    <div class="condition">
+        <select class="key select_tag" values="tag_list" tools="tag_viewer">
+        </select>
+        <select class="key context">
+            <option value="top">Top</option>
+            <option value="iframe">In iframe</option>
+        </select>
+        <select class="key uri">
+            <option value="para">Parameters</option>
+            <option value="hash">Hash</option>
+        </select>
+        <select class="key user_attr" values="user_attributes">
+        </select>
+        <input class="key selector" type="text" tools="path_builder"></input>
+        <select class="key user_action"></select>
+        <select class="key salesforce_obj"></select>
+        <select class="key workday_obj"></select>
+
+        <select class="operator url host path para hash value_validation">
+            <optgroup label="POSITIVE">
+                <option value="empty">Empty</option>
+                <option value="equals">Equals</option>
+                <option value="contains" selected>Contains</option>
+                <option value="starts_with">Starts With</option>
+                <option value="ends_with">Ends With</option>
+                <option value="regex">Regex</option>
+                <option value="wildcard">Wildcard (?|*)</option>
+            </optgroup>
+            <optgroup label="NEGATIVE">
+                <option value="not_empty">Not Empty</option>
+                <option value="not_equals">Not Equals</option>
+                <option value="not_contains" selected>Not Contains</option>
+                <option value="not_starts_with">Not Starts With</option>
+                <option value="not_ends_with">Not Ends With</option>
+                <option value="not_regex">Not Regex</option>
+                <option value="not_wildcard">Not Wildcard (?|*)</option>
+            </optgroup>
+        </select>
+        <select class="operator selector">
+            <option value="exist" selected>Exists</option>
+            <option value="not_exist">Does not Exist</option>
+            <option value="equals">Equals</option>
+            <option value="contains">Contains</option>
+            <option value="starts_with">Starts With</option>
+            <option value="ends_with">Ends With</option>
+        </select>
+        <select class="operator user_attr salesforce_obj">
+            <option value="equals">Equals</option>
+            <option value="contains" selected>Contains</option>
+            <option value="starts_with">Starts With</option>
+            <option value="ends_with">Ends With</option>
+            <option value="greater_than">Greater Than</option>
+            <option value="less_than">Less Than</option>
+            <option value="date_greater_than">Date Greater Than</option>
+            <option value="date_less_than">Date Less Than</option>
+        </select>
+        <select class="operator user_action">
+            <option value="completed" selected>Completed</option>
+            <option value="not_completed">Not Completed</option>
+        </select>
+        <input type="text"
+            class="value equals contains starts_with ends_with regex wildcard not_equals not_contains not_starts_with not_ends_with not_regex not_wildcard"></input>
+        <input type="number" class="value greater_than less_than"></input>
+        <input type="date" class="value date_greater_than date_less_than"></input>
+    </div>
+    <div class="tool">
+    </div>
+</div>

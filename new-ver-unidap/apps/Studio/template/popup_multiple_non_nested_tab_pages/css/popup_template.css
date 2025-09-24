@@ -1,0 +1,60 @@
+
+    #popup_body .introjs-tooltiptext a,#popup_body .unidap_link,#popup_body :is(.unidap_popup_tabs,[fr-original-class=unidap_popup_tabs]) :is(.unidap_popup_content,[fr-original-class=unidap_popup_content]) a,#popup_body [fr-original-class=unidap_link] {
+        text-decoration: none;
+        color: #0875e1;
+        cursor: pointer
+    }
+#popup_body .unidap_popup_pages:has(input[id^=unidap_popup_page]:checked),#popup_body [fr-original-class=unidap_popup_pages]:has(input[id^=unidap_popup_page]:checked) {
+        display: block !important
+    }
+#popup_body .unidap_popup_tabs,#popup_body [fr-original-class=unidap_popup_tabs] {
+        display: block !important;
+        padding: 0 !important;
+        overflow: auto;
+        overflow-x: hidden;
+        position: relative;
+        margin: 0 !important
+    }
+#popup_body .unidap_popup_content p,#popup_body [fr-original-class=unidap_popup_content] p {
+        color: #5a574e;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0
+    }
+#popup_body .unidap_popup_footer label,#popup_body [fr-original-class=unidap_popup_footer] label {
+        background: #0975d7;
+        padding: 8px 20px;
+        color: #fff;
+        margin: 0;
+        /* position: relative; */
+        /* margin-left: 10px; */
+        height: 20px;
+        box-sizing: content-box;
+        border-radius: 4px;
+        cursor: pointer
+    }
+#popup_body :is(.unidap_popup_pages,[fr-original-class=unidap_popup_pages]) input[type=radio]{
+        position: fixed;
+        top: -9999px;
+        left: -9999px
+    }
+#popup_body .unidap_popup_content,#popup_body [fr-original-class=unidap_popup_content] {
+        font-family: Roboto, sans-serif;
+        font-weight: 400;
+        line-height: 21px;
+        text-align: left;
+        font-size: 14px;
+        color: #5a574e;
+        margin-left: 0 !important;
+        padding-left: 10px
+    }
+#popup_body :is(.unidap_popup_tabs,[fr-original-class=unidap_popup_tabs]) :is(.unidap_popup_content,[fr-original-class=unidap_popup_content]),#popup_body [id^=unidap_popup_tab_content] {
+        display: block !important;
+        width: 100% !important;
+        position: relative !important;
+        left: 0 !important;
+        padding: 0;
+        top: 0 !important;
+        /* opacity: 0 !important */
+    }

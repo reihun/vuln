@@ -1,0 +1,83 @@
+<div class="line button_content">
+    <div class="language_selector_container" >
+        <i class='fa fa-language' aria-hidden='true'></i>
+        <select id="button_language_selector"></select>
+    </div>
+    <div id="button_editor" class="editor"></div>
+
+</div>
+<div id="dimension">
+        <div>Height (px):<input type="number" value="30" name="height" class="btn_height"></div>
+        <div>Width (px):<input type="number" value="80" name="width" class="btn_width"></div>
+    </div>
+</div>
+<div class="line no_break style_templates_container">
+    Style:&nbsp;
+    <select class="style_templates"></select>
+</div>
+<div class="line no_break">
+    <span>Stick on</span>
+    <select class="view_port">
+        <option value="window">Window</option>
+        <option value="parent">Its direct parent</option>
+    </select>
+</div>
+<div class="line">
+    <div>
+        <span>Position</span>
+        <select class="position_type">
+            <option value="absolute" selected>Absolute</option>
+            <option value="relative">Relative</option>
+        </select>
+    </div>
+    <div class="position_area">
+        <div class="content">Content area</div>
+        <div class="position absolute" pos="top-left" inside="no"></div>
+        <div class="position absolute" pos="top-right" inside="no"></div>
+        <div class="position absolute" pos="bottom-left" inside="no"></div>
+        <div class="position absolute" pos="bottom-right" inside="no"></div>
+        <div class="position absolute" pos="middle-left" inside="no"></div>
+        <div class="position absolute button" pos="middle-right" inside="no"></div>
+        <div class="position absolute" pos="bottom-middle" inside="no"></div>
+        <div class="position absolute" pos="top-middle" inside="no"></div>
+
+        <div class="position absolute" pos="top-left" inside="yes"></div>
+        <div class="position absolute" pos="top-right" inside="yes"></div>
+        <div class="position absolute" pos="bottom-left" inside="yes"></div>
+        <div class="position absolute" pos="bottom-right" inside="yes"></div>
+        <div class="position absolute relative" pos="middle-left" inside="yes"></div>
+        <div class="position absolute relative" pos="middle-right" inside="yes"></div>
+        <div class="position absolute" pos="middle-middle" inside="yes"></div>
+        <div class="position absolute" pos="bottom-middle" inside="yes"></div>
+        <div class="position absolute" pos="top-middle" inside="yes"></div>
+    </div>
+</div>
+<div class="line">
+    <span>Reposition</span>
+    <div>
+        Left: <input type="number" class="reposition left"></input>
+        Top: <input type="number" class="reposition top"></input>
+        zIndex: <input type="number" class="reposition zindex" value="10"></input>
+    </div>
+</div>
+<div class="line">
+    <span>When clicked trigger</span>
+    <div>
+        <select class="trigger key">
+            <option value="none" selected>Nothing</option>
+            <option value="tooltip">Tooltip</option>
+            <option value="popup">Popup</option>
+            <option value="workflow">Workflow</option>
+        </select>
+        <select class="value popup">
+            <option value="none">[None]</option>
+        </select>
+        <select class="value workflow">
+            <option value="none">[None]</option>
+        </select>
+        <select class="value tooltip">
+            <option value="none">[None]</option>
+        </select>
+
+    </div>
+</div>

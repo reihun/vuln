@@ -1,0 +1,10 @@
+
+        :is(:is(div.builders .content_builder .control_pannel) .tooltip_position_area,:is(div.builders .content_builder .control_pannel) .position_area) .smarttip {
+            border: none;
+        }
+:is(:is(:is(div.builders .content_builder .control_pannel) .tooltip_position_area,:is(div.builders .content_builder .control_pannel) .position_area) .smarttip)::before {
+                content: "ⓘ";
+                color: #fb360b;
+                line-height: 15px;
+                font-size: larger;
+            }

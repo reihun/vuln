@@ -1,0 +1,25 @@
+
+    :is(div.builders .content_builder .control_pannel.tooltip) .tooltip_position_area {
+        top: 30px !important;
+    }
+:is(:is(div.builders .content_builder .control_pannel.tooltip) .tooltip_position_area) .element {
+            border: none;
+            top: calc((100% - 20px) / 2);
+            left: calc((100% - 45px) / 2);
+        }
+:is(:is(:is(div.builders .content_builder .control_pannel.tooltip) .tooltip_position_area) .element)::before {
+                content: "ELEMENT";
+                color: aqua;
+                line-height: 15px;
+                font-size: x-small;
+            }
+#backdrop {
+    display: none;
+    background-color: rgba(255, 255, 255, .75);
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1400;
+}

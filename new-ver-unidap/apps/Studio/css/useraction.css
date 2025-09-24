@@ -1,0 +1,182 @@
+div.builders .content_builder .user_action {
+    padding: 10px 0;
+}
+:is(div.builders .content_builder .user_action) .title {
+        margin: 0;
+    }
+:is(div.builders .content_builder .user_action) :is(.conditions,.action) {
+        border: 1px solid #305eab;
+        border-radius: 5px;
+        padding: 5px;
+        margin-bottom: 10px;
+        box-shadow: rgba(0, 0, 0, .24) 0 3px 8px;
+
+    }
+:is(:is(div.builders .content_builder .user_action) :is(.conditions,.action)) .items {
+            background: #374673;
+            padding: 5px 5px 0;
+            margin-top: 5px;
+            display: grid;
+            border-radius: 0 0 5px 5px;
+        }
+:is(:is(:is(div.builders .content_builder .user_action) :is(.conditions,.action)) .items) .item .line input {
+                width: 100%;
+            }
+:is(:is(:is(div.builders .content_builder .user_action) .conditions .items) .item) input {
+                border-color: #1f2641;
+            }
+:is(:is(:is(div.builders .content_builder .user_action) .conditions .items) .item) .line {
+                display: flex;
+                column-gap: 2px;
+            }
+:is(:is(div.builders .content_builder .user_action) .conditions .items) :is(.lv2,.lv3,.lv4) {
+            display: none;
+        }
+.method:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) select) {
+                    background: inherit;
+                    border: none;
+                    color: #7fffd4;
+                    font-weight: 700;
+                }
+.method:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) select) option {
+                    color: #000;
+                }
+:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .item):nth-child(2) button.remove {
+                    display: none;
+                }
+:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .item) button.remove:hover {
+                    box-shadow: none;
+                }
+:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .item) .header {
+                    display: flex;
+                    column-gap: 5px;
+                    margin-bottom: 5px;
+                    position: relative;
+                }
+:is(:is(:is(div.builders .content_builder .user_action) .action) .items)  > .header {
+                margin-bottom: 10px;
+            }
+:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .script) .header {
+                    display: flex;
+                    column-gap: 5px;
+                    margin-bottom: 10px;
+                }
+:is(:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .script) .header) .lv2 {
+                        display: none;
+                    }
+:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .script) textarea {
+                    height: 140px;
+                    resize: vertical;
+                }
+.script:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) {
+                    display: none;
+                }
+.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line {
+                    display: flex;
+                    flex-direction: row;
+                    margin-bottom: 10px;
+                }
+:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1 {
+                        width: 140px;
+                    }
+:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) .variables {
+                            font-size: smaller;
+                            font-style: italic;
+                            color: #7fffd4;
+                            height: 17px;
+                            line-height: 17px;
+                            position: absolute;
+                            left: 90px;
+                        }
+:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) .insert_var {
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 4px;
+                            position: relative;
+                            height: 70px;
+                            width: 90%;
+                        }
+:is(:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) .insert_var) select option {
+                                color: black;
+                            }
+:is(:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) .insert_var) button {
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                background: #596897;
+                                height: 20px;
+                                line-height: 20px;
+                            }
+:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) select {
+                            width: 100%;
+                        }
+:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2 {
+                        width: calc(100% - 125px);
+                        display: flex;
+                        position: relative;
+                    }
+:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2) :is(input,textarea) {
+                            width: 100%;
+                            background: inherit;
+                            color: #fff;
+                        }
+:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2) input {
+                            border: 0;
+                            border-bottom: 1px solid;
+                        }
+:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2) textarea {
+                            border-radius: 5px;
+                            border-color: #fff;
+                            height: 100%;
+                        }
+:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2) button {
+                            position: absolute;
+                            right: 2px;
+                            top: 4px;
+                            background: inherit;
+                            border: none;
+                        }
+:is(:is(:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2) button):hover {
+                                box-shadow: none;
+                                color: #7fffd4;
+                            }
+.expanded:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) {
+                        display: block;
+                        color: #deb887;
+                    }
+.expanded:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1 {
+                            display: flex;
+                            width: 100%;
+                            position: relative;
+                            margin-bottom: 5px;
+                            column-gap: 5px;
+                        }
+:is(.expanded:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) .insert_var {
+                                display: flex;
+                                flex-direction: row;
+                                column-gap: 5px;
+                                position: absolute;
+                                right: 0;
+                                width: calc(100% - 134px);
+                            }
+:is(:is(.expanded:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) .insert_var) button {
+                                    position: relative;
+                                }
+:is(.expanded:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col1) .variables {
+                                left: 94px;
+                            }
+.expanded:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2 {
+                            width: 100%;
+
+
+                        }
+:is(.expanded:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line) .col2) textarea {
+                                height: 95px;
+                                resize: vertical;
+                            }
+:is(.log:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .line):has(:is(input,textarea):focus) {
+                        color: #deb887;
+                    }
+:is(:is(:is(:is(div.builders .content_builder .user_action) .action) .items) .data) .header {
+                    margin-bottom: 8px;
+                }

@@ -1,0 +1,182 @@
+<div class="action">
+    <p class="title">Action</p>
+    <div class="items">
+        <p class="header">
+            <select class="method">
+                <option value="script_exec">Execute script</option>
+                <option value="log" selected>Fire log</option>
+            </select>
+        </p>
+        <div class="data script_exec">
+            <div class="header">Priority
+                <select class="lv1 priority">
+                    <option value="last">Last</option>
+                    <option value="first" selected>As soon as possible</option>
+                    <option value="manual">Give priority</option>
+                </select>
+                <input type="number" class="lv2 manual"></input>
+            </div>
+            <textarea class="script_content editor script_exec"></textarea>
+        </div>
+        <div class="data log">
+            <div class="line">
+                <div class="col1">Event Category</div>
+                <div class="col2"><input type="text" class="event_cat"></input></div>
+            </div>
+            <div class="line">
+                <div class="col1">Event Action</div>
+                <div class="col2"><input type="text" class="event_action"></input></div>
+            </div>
+            <div class="line">
+                <div class="col1">Event Name</div>
+                <div class="col2"><input type="text" class="event_name"></input></div>
+            </div>
+            <div class="line">
+                <div class="col1">Event Value
+                    <button class="variables">f(x)</button>
+                    <div class="insert_var hide">
+                        <select class="existing_vargroups">
+                            <option class="none" selected>[None]</option>
+                        </select>
+                        <select class="existing_vars"></select>
+                        <button class="insert_existing_var"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="col2"><textarea class="event_value editor script"></textarea><button><i class="fa fa-expand"
+                            aria-hidden="true"></i></button></div>
+            </div>
+            <div class="line">
+                <div class="col1">
+                    Custom Var 1
+                    <button class="variables">f(x)</button>
+                    <div class="insert_var hide">
+                        <select class="existing_vargroups">
+                            <option class="none" selected>[None]</option>
+                        </select>
+                        <select class="existing_vars"></select>
+                        <button class="insert_existing_var"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="col2">
+                    <textarea class="custom_var_1 editor script"></textarea><button><i class="fa fa-expand"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="line">
+                <div class="col1">Custom Var 2
+                    <button class="variables">f(x)</button>
+                    <div class="insert_var hide">
+                        <select class="existing_vargroups">
+                            <option class="none" selected>[None]</option>
+                        </select>
+                        <select class="existing_vars"></select>
+                        <button class="insert_existing_var"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="col2">
+                    <textarea class="custom_var_2 editor script"></textarea><button><i class="fa fa-expand"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="line">
+                <div class="col1">Custom Var 3
+                    <button class="variables">f(x)</button>
+                    <div class="insert_var hide">
+                        <select class="existing_vargroups">
+                            <option class="none" selected>[None]</option>
+                        </select>
+                        <select class="existing_vars"></select>
+                        <button class="insert_existing_var"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="col2">
+                    <textarea class="custom_var_3 editor script"></textarea><button><i class="fa fa-expand"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="line">
+                <div class="col1">Custom Var 4
+                    <button class="variables">f(x)</button>
+                    <div class="insert_var hide">
+                        <select class="existing_vargroups">
+                            <option class="none" selected>[None]</option>
+                        </select>
+                        <select class="existing_vars"></select>
+                        <button class="insert_existing_var"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="col2">
+                    <textarea class="custom_var_4 editor script"></textarea><button><i class="fa fa-expand"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="line">
+                <div class="col1">Custom Var 5
+                    <button class="variables">f(x)</button>
+                    <div class="insert_var hide">
+                        <select class="existing_vargroups">
+                            <option class="none" selected>[None]</option>
+                        </select>
+                        <select class="existing_vars"></select>
+                        <button class="insert_existing_var"><i class="fa fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="col2">
+                    <textarea class="custom_var_5 editor script"></textarea><button><i class="fa fa-expand"
+                            aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="conditions">
+    <p class="title">Conditions</p>
+    <div class="items">
+        <div class="item movable template">
+            <div class="remove_item"><button class="remove"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+            </div>
+            <div class="header">
+                Based on the
+                <select class="lv1 based_on">
+                    <option value="none" selected>[None]</option>
+                    <option value="event">Event</option>
+                    <option value="visibility">Visibility</option>
+                    <option value="custom_script">Custom Script</option>
+                </select>
+                of
+                <select class="lv2 visibility">
+                    <option value="specific_element">Specific Element</option>
+                </select>
+                <select class="lv2 event">
+                    <option value="clicked_on">Clicked on</option>
+                    <option value="dom_loaded">DOM Loaded</option>
+                    <option value="window_loaded">Window Loaded</option>
+                    <option value="ele_focus">Element Focus</option>
+                    <option value="ele_blur">Element Blur</option>
+                    <option value="page_focus">Page Focus</option>
+                    <option value="page_scroll">Page Scroll</option>
+                    <option value="page_blur">Page Blur</option>
+                    <option value="page_view">Page View</option>
+                    <option value="page_leave">Leaving Page</option>
+                    <option value="from_unidap">UniDAP Apps</option>
+                </select>
+            </div>
+            <div class="data">
+                <div class="line">
+                    <input class="lv3 key from_unidap"></input>
+                    <textarea class="lv2 value custom_script editor script"></textarea>
+                    <!-- <select class="lv3 key specific_element clicked_on ele_focus ele_blur">
+                        <option value="css">CSS</option>
+                        <option value="xpath" selected>XPath</option>
+                    </select> -->
+                    <input type="text" class="lv3 key specific_element clicked_on ele_focus ele_blur"
+                        tools="path_builder"></input>
+                </div>
+            </div>
+            <div class="tool"></div>
+        </div>
+    </div>
+    <div class="line">
+        <button class="more"><i class="fa fa-plus"></i></button>
+    </div>
+</div>

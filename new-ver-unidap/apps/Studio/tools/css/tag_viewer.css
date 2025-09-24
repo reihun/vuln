@@ -1,0 +1,151 @@
+
+    .tag_viewer_content  > .conditions {
+        padding: 0;
+    }
+
+.tag_viewer_content .top {
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 40px;
+        line-height: 40px;
+        color: #374673;
+        font-weight: bolder;
+    }
+
+:is(.tag_viewer_content .top) .close {
+            height: 25px;
+            width: 25px;
+            border-radius: 50%;
+            background: none;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-color: white;
+        }
+
+.tag_viewer_content :is(.key,.operator,.value) {
+        display: none
+    }
+
+.tag_viewer_content .conditions {
+        background: #1f2641;
+        padding: 5px;
+        border-radius: 0 0 5px 5px;
+    }
+
+:is(.tag_viewer_content .conditions) .rule-text {
+            background: #374673;
+            border-radius: 5px;
+            color: white;
+            padding: 5px;
+            margin-bottom: 5px;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+        }
+
+:is(:is(.tag_viewer_content .conditions) .rule-text) ._connector {
+                background: cyan;
+                color: #374673;
+                border-radius: 5px;
+                padding: 2px;
+                height: 15px;
+                font-size: x-small;
+                align-items: center;
+                display: flex;
+            }
+
+:is(:is(.tag_viewer_content .conditions) .rule-text) ._method {
+                border: 1px solid white;
+                padding: 2px 5px;
+                border-radius: 5px;
+                align-items: center;
+                display: flex;
+                line-height: 15px;
+            }
+
+/* div {
+        padding: 5px;
+        margin-top: 5px;
+        display: grid;
+        border-radius: 0 0 5px 5px;
+        color: white;
+
+        p {
+            margin: 10px 0;
+        }
+
+        input {
+            height: 20px;
+            background: inherit;
+            border: 0;
+            border-bottom: 1px solid #fff;
+            color: inherit;
+        }
+
+        select {
+            height: 20px;
+            background: inherit;
+            border: 0;
+            border-bottom: 0.5px solid #fff;
+            color: inherit;
+        }
+
+        .conditions {
+            .line {
+                padding: 5px;
+                margin-bottom: 5px;
+                border-radius: 5px;
+
+                div.method {
+                    position: relative;
+
+                    .operator {
+                        width: 100px
+                    }
+                }
+
+                .condition {
+                    display: flex;
+                    column-gap: 2px;
+
+                    .key {
+                        max-width: 120px;
+                    }
+
+                    .operator {
+                        max-width: 85px;
+                    }
+
+                    .value {
+                        width: 100%;
+                    }
+                }
+
+                .tool {
+                    padding-top: 5px;
+                }
+
+                &.movable {
+                    :is(input, select) {
+                        border-color: #1f2641;
+                    }
+                }
+            }
+        }
+    } */
+
+.content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}

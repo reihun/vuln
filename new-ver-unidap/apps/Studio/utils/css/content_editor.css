@@ -1,0 +1,34 @@
+
+    .resource_selection select {
+        width: 100%;
+    }
+.resource_selection .line {
+        display: flex;
+        gap: 5px;
+        padding-bottom: 5px;
+    }
+:is(.resource_selection .line) span {
+            width: 60px;
+        }
+:is(.resource_selection .line) select {
+            max-width: calc(100% - 70px);
+            border: none;
+            background: none;
+            border-bottom: 1px solid #0f226a;
+        }
+:is(.resource_selection .line) input {
+            border: none;
+            background: none;
+            border-bottom: 1px solid #0f226a;
+        }
+[type='number']:is(:is(.resource_selection .line) input) {
+                width: 50px;
+            }
+
+            ;
+[type='text']:is(:is(.resource_selection .line) input) {
+                width: calc(100% - 70px);
+            }
+.resource_selection .showing_options .option.link {
+        display: none;
+    }

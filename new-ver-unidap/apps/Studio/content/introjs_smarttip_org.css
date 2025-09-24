@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.introjs-smarttip {
+    box-sizing: content-box;
+    background: transparent;
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+    text-decoration: none;
+  }
+.introjs-smarttip:focus {
+      border: 0;
+      outline: 0;
+      box-shadow: none !important;
+    }
+  
+  .introjs-hide {
+    display: none !important;
+  }
+  
+  .introjs-fixedsmarttip {
+    position: fixed;
+  }
+  
+  .introjs-smarttip::before {
+    content: "ⓘ";
+    color: #fb360b;
+    line-height: 20px;
+    font-weight: 900;
+    font-size: 18px !important;
+  
+  }
+  
+  .introjs-smarttip:hover {
+    text-decoration: none;
+  }

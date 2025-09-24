@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/dialog.css">
+    <link rel="stylesheet" href="css/context_menu.css">
+    <link rel="stylesheet" href="css/listing.css">
+</head>
+
+
+<body>
+    <div class="tenant">
+        <div class="line">
+            <div><span>Tenant</span>
+                <select class="tenant_select">
+                </select>
+            </div>
+            <div class="ml-auto">
+                <span>Status</span>
+                <select class="content_mode_select">
+                    <option value="DRAFT">Draft</option>
+                    <option value="PUBLISHED">Published</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="filter">
+        <div class="line">
+            <div><span>Site</span>
+                <select class="site_select">
+                    <option value="this_page">This Page only</option>
+                    <option value="this_site">This Site only</option>
+                    <option value="all" selected>All</option>
+                </select>
+            </div>
+            <div><span>Content</span>
+                <select class="content">
+                    <option value="all">All</option>
+                    <option value="user_action">User Action</option>
+                    <option value="smarttip">Smart-tip</option>
+                    <option value="hint">Hint</option>
+                    <option value="workflow">Workflow</option>
+                    <option value="button">Button</option>
+                    <option value="tooltip">Tooltip</option>
+                    <option value="popup">Popup</option>
+                    <option value="custom_content">Custom Content</option>
+                </select>
+            </div>
+            <div id="_udap_context-menu"></div>
+        </div>
+    </div>
+    <div class="header">
+        <div>
+            <!-- <button class="export"><i class="fa fa-paper-plane" aria-hidden="true"></i> Export</button> -->
+            <button class="token"><i class="fa fa-ticket" aria-hidden="true"></i> Config</button>
+        </div>
+        <div>
+            <!-- <button class="new_content"><i class="fa fa-plus" aria-hidden="true"></i> New Site</button> -->
+            <button class="refresh"><i class="fa fa-refresh" aria-hidden="true"></i> Refresh</button>
+        </div>
+    </div>
+    <div class="listing"></div>
+    <div class="template">
+        <div class="domain">
+            <div class="header lv1">
+                <div class="buttons">
+                    <button class="new_content"><i class="fa fa-plus" aria-hidden="true"></i>CONTENT</button>
+                </div>
+            </div>
+            <div class="pathNames collapsed">
+                <div class="pathname">
+                    <div class="header lv2">
+                        <div class="buttons">
+                        </div>
+                    </div>
+                    <div class="contents collapsed">
+                        <div class="type">
+                            <div class="header lv3">
+                            </div>
+                            <div class="data">
+                                <div class="item">
+                                    <div class="row1">
+                                        <div class="col1">
+                                            <span class="index"></span>
+                                        </div>
+                                        <div class="col2">
+                                            <span class="name"></span>
+                                        </div>
+                                    </div>
+                                    <div class="row2">
+                                        <div class="col1"></div>
+                                        <div class="col2">
+                                            <input class="active" type="checkbox">Active</input>
+                                            <div class="button">
+                                                <div class="group">
+                                                    <button class="up" title="Move up"><i class="fa fa-arrow-up"
+                                                            aria-hidden="true"></i></button>
+                                                    <button class="down" title="Move down"><i class="fa fa-arrow-down"
+                                                            aria-hidden="true"></i></button>
+                                                </div>
+                                                <div class="group">
+                                                    <button class="publish_content" style="display: none;" title="Publish"><i class="fa fa-globe"
+                                                            aria-hidden="true"></i></button>
+                                                    <button class="open_link" title="Open the page"><i class="fa fa-external-link"
+                                                            aria-hidden="true"></i></button>
+                                                    <button class="clone" title="Clone As New"><i class="fa fa-clone"
+                                                            aria-hidden="true"></i></button>
+                                                    <button class="remove" title="Delete"><i class="fa fa-trash-o"
+                                                            aria-hidden="true"></i></button>
+                                                    <button class="edit" title="Edit"><i class="fa fa-edit"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup_template">
+        <div class="launcher_mode">
+            <div class="section">
+                Domains:
+                <div class="domains">
+                    <div class="item">
+                        <input type="text" class="custom_url"/>
+                        <select class="method">
+                            <option value="none">---None---</option>
+                            <option value="https://unidap.fsoft.com.vn/files/storage/fso/apps/unidap_launcher.js">PROD FSO</option>
+                            <option value="https://unidap.fsoft.com.vn/files/storage/fdi/apps/unidap_launcher.js">PROD FDI</option>
+                            <option value="https://unidap-dev.fsoft.com.vn/files/storage/fsoft/apps/unidap_launcher.js">DEV FSOFT</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="publish">
+            <div class="section">
+                Please select publishing environment:
+                <select class="method">
+                    <option value="testing">For Testing</option>
+                    <option value="prod">For Production</option>
+                </select>
+            </div>
+            <div class="section">
+                Domains:
+                <div class="domains">
+                    <div class="item">
+                        <i class='fa fa-download custom_url_download' aria-hidden='true'></i><input type="text" class="custom_url"/>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="site_info">
+            <div>URL: <input class="url"></input></div>
+            <div>SITE ID
+                <div>
+                    Environment: Testing: <input class="testing_site_id" type="number"
+                        style="width: 50px;text-align: center;"></input>
+                    Production: <input class="prod_site_id" type="number"
+                        style="width: 50px;text-align: center;"></input>
+                </div>
+            </div>
+            <div>
+                <div><input type="checkbox" class="tracking_content">Track Content Usage</input></div>
+            </div>
+        </div>
+        <div class="server_conf">
+            <div>API Endpoint: <input class="endpoint" placeholder="https://..."></input></div>
+            <div>SSO API Endpoint: <input class="ssoEndpoint" placeholder="https://signin.fsoft.com.vn/..."></input>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="js/JSONC.js"></script> -->
+
+    <script src="js/lz-string-144.js"></script>
+    <script src="js/const.js"></script>
+    <script src="js/common_funcs.js"></script>
+    <script src="js/less.js"></script>
+
+    <script src="js/dialog.js"></script>
+    <script src="js/context_menu.js"></script>
+
+    <script src="js/workflow.js"></script>
+    <script src="js/smarttip.js"></script>
+    <script src="js/hint.js"></script>
+    <script src="js/custom_content.js"></script>
+    <script src="js/button.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/tooltip.js"></script>
+    <script src="js/useraction.js"></script>
+    
+    <script src="js/listing.js"></script>
+</body>
+
+</html>

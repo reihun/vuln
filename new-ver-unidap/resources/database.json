@@ -1,0 +1,15 @@
+{
+	"settings": {
+		"indexedDB": false,
+		"endpoint": "https://unidap.fsoft.com.vn/dap",
+		"ssoEndpoint": "https://signin.fsoft.com.vn/auth/realms/XOne/protocol/openid-connect/auth",
+		"authCookies": ["XSRF-TOKEN","JSESSIONID_XONE_UniDAP_DAP" ]
+	},
+	"sites": [
+	],
+	"dependencies":[
+		"intro.js",
+		"intro.css"
+	]
+
+}

@@ -1,0 +1,42 @@
+
+        
+
+        :is(:is(div.builders .content_builder .control_pannel.button) .line) input.button_text {
+            max-width: 300px;
+            width: fit-content;
+            background: #f9f9f9;
+            border: 1px solid #bdbdbd;
+            border-radius: 3px;
+            height: 30px;
+            padding: 5px;
+            box-sizing: border-box;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            color: #676a6c;
+            font-weight: 600;
+            justify-content: center;
+        }
+:is(:is(:is(div.builders .content_builder .control_pannel.button) .line) input.button_text):hover {
+                border-color: #9e9e9e;
+                background-color: #e0e0e0;
+            }
+:is(:is(div.builders .content_builder .control_pannel.button) .line) .value{
+            display: none;
+        }
+/* display: grid;
+        grid-template-columns: 1fr 10px 1fr; */
+:is(:is(div.builders .content_builder .control_pannel.button) .line.button_content) .language_selector_container {
+            /* grid-column: 1; */
+            margin-bottom: 10px;
+            position: relative;
+        }
+:is(:is(div.builders .content_builder .control_pannel.button) .line.button_content) .button_text_container {
+            /* grid-column: 3; */
+            display: flex;
+            justify-content: center;
+        }
+:is(div.builders .content_builder .control_pannel.button) #dimension {
+        display: flex;
+        justify-content: space-between;
+    }

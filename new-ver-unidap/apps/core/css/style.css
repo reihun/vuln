@@ -1,0 +1,116 @@
+#_udap_studio{
+	
+	font-family: 'Raleway', sans-serif;
+	font-size: 14px;
+    line-height: 20px;
+	position: fixed;
+	z-index: 999999;
+	top: 0;
+	height: 720px;
+	right: 10px;
+	width: 400px;
+
+	border: 1px solid rgb(71, 163, 227);
+    border-radius: 8px;
+	background: #1f2641;
+	box-shadow: #47a3e3 0px 4px 12px;
+	box-sizing: border-box;
+}
+#_udap_studio.minimized{
+	left: auto !important;
+	top: auto !important;
+	bottom: 0 !important;
+	height: 50px;
+	right: 0 !important;
+	width: 200px;
+}
+
+#_udap_studio ._udap_header{
+	height: 50px;
+	width: 100%;
+	color: white;
+    /* border-bottom: solid 2px rgb(9 70 112); */
+	display: flex;
+	cursor: move;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+#_udap_studio ._udap_header span{
+	padding: 17px;
+	font-weight: lighter;
+	max-width: 45%;
+    text-wrap: nowrap;
+    overflow: hidden;
+}
+
+#_udap_studio.minimized ._udap_header{
+	cursor: default;
+}
+
+:is(#_udap_studio.minimized ._udap_header) span{
+		padding-left: 10px;
+	}
+
+#_udap_studio ._udap_header ._udap_home{
+	position: absolute;
+	right: 0;
+	margin: 13px 55px;
+    font-size: 24px;
+    color: rgb(9, 70, 112);
+	cursor: pointer;
+}
+#_udap_studio ._udap_header ._udap_home button{
+	padding: 0;
+    border-radius: 0;
+	color: #1f2641;
+    background: rgb(9, 70, 112);
+    height: 20px;
+    width: 30px;
+	min-width: auto;
+    min-height: auto;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+	border: none;
+}
+
+#_udap_studio ._udap_header ._udap_home button:hover{
+	color: rgb(71, 163, 227); 
+	box-shadow: #689ec5 0px 4px 12px;
+}
+
+#_udap_studio ._udap_header ._udap_home:hover{
+	color: rgb(71, 163, 227);
+	text-shadow: #689ec5 0px 4px 12px;
+}
+
+#_udap_studio ._udap_header ._udap_mini{
+	position: absolute;
+    width: 30px;
+    height: 20px;
+    border: solid 1px rgb(9, 70, 112);
+    border-bottom-width: 5px;
+	margin: 15px;
+	right: 0;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+#_udap_studio ._udap_header ._udap_mini:hover{
+	border: solid 1px rgb(71, 163, 227);
+	border-bottom-width: 5px;
+	box-shadow: #47a3e3 0px 4px 12px;
+}
+
+#_udap_studio.minimized ._udap_frame{
+	display: none !important;
+}
+#_udap_studio ._udap_frame{
+	height: calc(100% - 55px);
+	width: 100%;
+    border: none;
+}

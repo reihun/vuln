@@ -1,0 +1,559 @@
+
+  div.path_builder_content .top {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    line-height: 40px;
+    color: #374673;
+    font-weight: bolder;
+  }
+
+:is(div.path_builder_content .top) .close {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      background: none;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      border-color: white;
+    }
+
+:is(div.path_builder_content .selected_element) .pathSelector {
+      border: 1px solid #47a3e3;
+      border-radius: 5px;
+      padding: 2px;
+      font-size: 12px;
+      line-height: 12px;
+      overflow: hidden;
+      word-wrap: break-word;
+    }
+
+:is(:is(div.path_builder_content .selected_element) .pathSelector) .selector {
+        cursor: pointer;
+      }
+
+:is(:is(div.path_builder_content .selected_element) .pathSelector)::-webkit-scrollbar {
+        width: 5px;
+      }
+
+:is(:is(div.path_builder_content .selected_element) .pathSelector)::-webkit-scrollbar-thumb {
+        background: #a1a8b4;
+        border-radius: 10px;
+      }
+
+:is(div.path_builder_content .selected_element) .iframe {
+      display: none;
+    }
+
+div.path_builder_content .header {
+    display: flex;
+    justify-content: space-between;
+    background: #1f2641;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    padding: 10px;
+    z-index: 1;
+    width: auto !important;
+  }
+
+:is(div.path_builder_content .header)  > div {
+      display: flex;
+      height: 20px;
+      column-gap: 5px;
+    }
+
+div.path_builder_content .path_manual {
+    position: relative;
+    display: flex;
+  }
+
+:is(div.path_builder_content .path_manual) textarea {
+      width: 100%;
+      height: 200px;
+      padding: 10px;
+      background: #000;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+    }
+
+:is(div.path_builder_content .path_manual) .control {
+      display: flex;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      column-gap: 5px;
+    }
+
+:is(div.path_builder_content .path_manual) button {
+      width: 85px;
+      height: 25px;
+    }
+
+div.path_builder_content .path_auto {
+    display: none;
+    color: white;
+  }
+
+:is(div.path_builder_content .path_auto) .iframe_info {
+      display: none;
+      padding: 10px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+      border-left: 2px solid cyan;
+    }
+
+:is(:is(div.path_builder_content .path_auto) .iframe_info) select.iframe {
+        width: 315px;
+        border: none;
+        background: none;
+        color: inherit;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+:is(:is(:is(div.path_builder_content .path_auto) .iframe_info) .custom_url_pannel) .url_operator {
+          max-width: 210px;
+          border: none;
+          background: none;
+          color: white;
+        }
+
+:is(:is(:is(:is(div.path_builder_content .path_auto) .iframe_info) .custom_url_pannel) .url_operator) option {
+            color: black;
+          }
+
+:is(:is(:is(div.path_builder_content .path_auto) .iframe_info) .custom_url_pannel) .new_url {
+          width: 100%;
+          background: 0 0;
+          border: none;
+          border-bottom: 1px solid #47a3e3;
+          color: #fff;
+        }
+
+:is(div.path_builder_content .path_auto) .item_tab_header {
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+    }
+
+:is(:is(div.path_builder_content .path_auto) .item_tab_header) .item_tab_header__item {
+        cursor: pointer;
+        color: #374673;
+        border-radius: 4px 4px 0 0;
+        background: #a2abc6;
+        border: none;
+        line-height: 20px;
+        padding: 0 5px;
+      }
+
+:is(:is(div.path_builder_content .path_auto) .item_tab_header) .active {
+        background-color: #094d84ad;
+        color: cyan;
+      }
+
+:is(:is(div.path_builder_content .path_auto) .path_item) .page {
+        padding: 5px;
+        border: none;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background: #094d84ad;
+        margin-bottom: 10px;
+      }
+
+:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element {
+          height: fit-content;
+          border: 2px solid #5a6a9b;
+          padding: 8px 5px;
+          border-radius: 5px;
+          background: #374673;
+          box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+          margin-bottom: 5px;
+          display: block;
+        }
+
+.no_attribute:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) {
+            min-height: 0;
+          }
+
+.no_attribute:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel {
+              width: 100%;
+            }
+
+.no_attribute:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration {
+              display: none;
+            }
+
+.expanded:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) {
+            max-height: none;
+            min-height: 100px;
+          }
+
+.selected:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) {
+            border-color: aquamarine;
+            box-shadow: 0px 2px 10px 0px #31adff;
+          }
+
+:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel {
+            display: flex;
+            flex-direction: column;
+            row-gap: 4px;
+            position: relative;
+            width: 100%;
+          }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel) .buttons {
+              display: flex;
+              column-gap: 5px;
+              margin-top: 5px;
+              align-items: center;
+            }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel) .buttons) button {
+                height: 20px;
+                min-width: 20px;
+                background: #fff;
+                color: #000;
+              }
+
+.expand:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel) .buttons) button) {
+                  width: 15px;
+                  border: none;
+                  color: white;
+                  opacity: 0.7;
+                  background: none;
+                  padding: 0;
+                  min-width: 0;
+                  margin: 0;
+                }
+
+.expand:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel) .buttons) button):hover {
+                    opacity: 1;
+                  }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel) .tag_info {
+              display: flex;
+            }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel) .tag_info) .element_tag_name {
+                border: 1px solid #47a3e3;
+                border-radius: 4px;
+                padding: 0 10px;
+                width: fit-content;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                cursor: pointer;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .pannel) .tag_info) input {
+                margin-left: 0;
+              }
+
+:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration {
+            overflow: hidden;
+            width: 100%;
+            margin-top: 10px;
+            display: none;
+          }
+
+.expanded:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) {
+              display: block;
+            }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) select:not([multiple]) option {
+              background: white;
+            }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) button:disabled {
+              box-shadow: none;
+              background: gray;
+            }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Index {
+              display: none;
+              background: #c3c8d5;
+              padding: 4px;
+              border-radius: 4px;
+              column-gap: 4px;
+            }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Index) span {
+                color: #374673;
+                font-style: italic;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Index) input,:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Index) select {
+                border: 0;
+                height: 19px;
+                border-radius: 4px;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Index) .custom {
+                display: flex;
+                column-gap: 4px;
+              }
+
+:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Index) .custom) input {
+                  width: 60px;
+                  text-align: center;
+                }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Text {
+              display: none;
+              height: 80px;
+              border-radius: 4px;
+              border: 1px solid #c3c8d5;
+              position: relative;
+            }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Text) textarea {
+                height: calc(100% - 20px);
+                width: 100%;
+                overflow: auto;
+                bottom: 0;
+                position: absolute;
+                border: 0;
+                border-top: 1px solid;
+                padding: 0;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Text) select {
+                height: 20px;
+                color: black;
+                background: #c3c8d5;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Text) input {
+                width: 225px;
+                margin-top: 5px;
+              }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes {
+              display: none;
+              overflow: hidden;
+              height: 100%;
+            }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) div.operator {
+                display: none;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) .attribute {
+                background: #c3c8d5;
+              }
+
+:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) .attribute) .key {
+                  display: flex;
+                  width: 100%;
+                }
+
+:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) .attribute) .col1 {
+                  width: calc(100% - 20px);
+                  display: flex;
+                }
+
+:is(:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) .attribute) .col2) button {
+                    width: 20px;
+                  }
+
+:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) .attribute) .value {
+                  display: flex;
+                  margin-top: 4px;
+                }
+
+:is(:is(:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) .attribute) .value) input {
+                    border: 0;
+                    width: 100%;
+                    height: 19px;
+                    background: white;
+                    border-radius: 4px;
+                  }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) .fa-search {
+                color: #2975e6;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) :is(.remove,.search) {
+                border: none;
+                background: inherit;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes) button.more {
+                height: 20px;
+                width: 100%;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes)::-webkit-scrollbar {
+                width: 5px;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes)::-webkit-scrollbar-thumb {
+                background: #a1a8b4;
+                border-radius: 10px;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Attributes):hover {
+                overflow: auto;
+              }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Classes {
+              display: none;
+              height: 100px;
+              border-radius: 4px;
+              border: 1px solid #c3c8d5;
+              position: relative;
+            }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Classes) div.operator {
+                border-bottom-left-radius: 0;
+                border-bottom-right-radius: 0;
+              }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .Classes) select {
+                height: calc(100% - 20px);
+                width: 100%;
+                overflow: auto;
+                bottom: 0;
+                position: absolute;
+              }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) div.operator {
+              background: #c3c8d5;
+              color: #000;
+              font-size: 12px;
+              height: 20px;
+              margin-bottom: 5px;
+              display: flex;
+              align-items: center;
+              border-radius: 4px;
+            }
+
+:is(:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) div.operator) input {
+                margin: 2px 4px;
+              }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) select {
+              border: none;
+              font-size: 12px;
+            }
+
+:is(:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .configuration) .key select {
+              max-width: 113px;
+              display: block;
+              background: inherit;
+            }
+
+:is(:is(:is(:is(div.path_builder_content .path_auto) .path_item) .page) .element) .tag_info .element_tag_name {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+          }
+
+:is(div.path_builder_content .path_auto) .inspect {
+      width: 100%;
+      margin-bottom: 5px;
+    }
+
+:link,
+:visited,
+.container .pathSelector .selector:hover {
+  color: #fff;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.template {
+  display: none !important;
+}
+
+select::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 5px;
+}
+
+select::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background: #a1a8b4;
+  border-radius: 10px;
+}
+
+button {
+  color: #fff;
+  border-radius: 4px;
+  background: #2975e6;
+  border: 1px solid #5097ff;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 5px;
+}
+
+button:hover {
+    filter: none;
+    cursor: pointer;
+    background: #2975e6;
+  }
+
+.fa.fa-trash-o {
+  color: #d30038;
+}
+
+.movable {
+  border: 1px solid #a2abc6;
+  border-right: 5px solid #b8ddf6;
+  background: #a2abc6;
+  color: #1f2641;
+  border-radius: 5px;
+  margin: 0 0 5px;
+  position: relative;
+  padding: 5px;
+}
+
+.movable .remove_item {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 1px solid #b8ddf6;
+    background: #b8ddf6;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    z-index: 1;
+  }
+
+:is(.movable .remove_item) button {
+      background: none;
+      border: none;
+      width: 15px;
+      padding: 0 4px;
+    }
+
+:is(:is(.movable .remove_item) button):hover {
+        box-shadow: none;
+      }
+
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: none;
+}
+
+select {
+  direction: rtl;
+  text-align: left;
+}
+
+select option[disabled] {
+    display: none;
+  }

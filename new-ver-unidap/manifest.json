@@ -1,0 +1,70 @@
+{
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "manifest_version": 3,
+    "name": "UniDAP Studio",
+    "description": "FSoft UniDAP Studio",
+    "version": "3.0.0",
+    "permissions": [
+        "tabs",
+        "storage",
+        "contextMenus",
+        "sidePanel",
+        "webRequest",
+        "declarativeNetRequest",
+        "cookies",
+        "windows",
+        "activeTab",
+        "downloads"
+    ],
+    "icons": {
+        "16": "images/logo16.png",
+        "32": "images/logo32.png",
+        "48": "images/logo48.png",
+        "128": "images/logo128.png"
+    },
+    "action": {},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "all_frames": false,
+            "css": ["apps/core/css/style.css"],
+            "js": [
+                "scripts/init_global_vars.js", "scripts/common_funcs.js", "scripts/main.js", "scripts/video_scan.js"
+            ],
+            "run_at": "document_end"
+        }, {
+            "matches": ["<all_urls>"],
+            "all_frames": true,
+            "js": ["scripts/top_layer.js"],
+            "run_at": "document_end"
+        }
+    ],
+    "background": {
+        "service_worker": "scripts/background.js"
+    },
+    "host_permissions": ["<all_urls>"],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "apps/core/imgs/*.png",
+                "apps/Studio/login.html",
+                "apps/Studio/index.html",
+                "apps/Studio/inspection.html",
+                "apps/Studio/style.html",
+                "apps/Studio/video_urls.html",
+                "apps/Studio/video_player.html",
+                "apps/Studio/css/*.css",
+                "apps/Studio/css/fonts/*",
+                "apps/Studio/js/*",
+                "apps/Studio/content/*.js",
+                "apps/Studio/content/*.css",
+                "apps/Studio/template/frame/frame.html",
+                "apps/Studio/template/frame/js/frame.js",
+                "apps/Studio/content/intro.js.map",
+                "apps/Studio/login.html"
+            ],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "minimum_chrome_version": "109"
+}

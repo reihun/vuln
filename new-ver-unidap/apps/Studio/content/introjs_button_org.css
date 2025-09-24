@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.introjs-custom-button {
+  background: #f3712096 !important;
+  border-radius: 3px;
+  width: fit-content;
+  min-width: 35px;
+  height: 30px;
+  padding: 5px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+}
+.introjs-custom-button:focus {
+    border: 0;
+    outline: 0;
+  }
+.introjs-custom-button:hover {
+    text-decoration: none;
+    background: rgb(243, 113, 32) !important;
+    color: white;
+  }
+
+.introjs-hide {
+  display: none !important;
+}
+
+.introjs-fixedcustombutton {
+  position: fixed;
+}

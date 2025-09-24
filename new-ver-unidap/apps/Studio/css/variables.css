@@ -1,0 +1,254 @@
+body {
+    background: #1f2641;
+    color: white;
+    font-family: "Nunito Sans";
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #a1a8b4;
+    border-radius: 10px;
+}
+
+input,
+textarea {
+    box-sizing: border-box;
+}
+
+input,
+select {
+    height: 20px;
+}
+
+input,
+select {
+    background: 0 0;
+    border: none;
+    border-bottom: 1px solid #47a3e3;
+    color: inherit
+}
+
+select option {
+    color: black;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    resize: vertical;
+    border-radius: 5px;
+}
+
+button {
+    /* color: white; */
+    border-radius: 4px;
+    /* background: #2975E6; */
+    /* border: 1px solid #5097FF; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 5px;
+
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+    color: white;
+    height: 25px;
+}
+
+button:hover {
+    filter: none;
+    cursor: pointer;
+    /* box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38); */
+    background: #2975E6;
+}
+
+.header {
+    margin: 8px;
+}
+
+.variables {
+    padding: 0 5px;
+}
+
+.variables .group {
+    display: grid;
+}
+
+.variables .group .group_selection {
+    border: none;
+    color: aquamarine;
+}
+
+.line {
+    display: flex;
+    column-gap: 5px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.line button {
+    position: absolute;
+    right: 0;
+    display: flex;
+    column-gap: 5px;
+}
+
+body>.header {
+    display: flex;
+    column-gap: 5px;
+    position: relative;
+}
+
+body>.header button:last-child {
+    position: absolute;
+    right: 0;
+}
+
+.variables .group>.header .line:nth-child(2) input {
+    width: 295px;
+}
+
+.variables .group :is(.var_detail, .listing) {
+    border: 1px solid #305eab;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, .24) 0 3px 8px;
+}
+
+.variables .group .var_detail>.content,
+.variables .group .listing>.content {
+    background: #374673;
+    padding: 5px 5px 5px;
+    margin-top: 5px;
+    display: grid;
+    border-radius: 0 0 5px 5px;
+}
+
+:is(.variables .group .var_detail > .content) .content {
+        display: flex;
+        position: relative;
+    }
+
+:is(:is(.variables .group .var_detail > .content) .content) .verify {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            padding: 5px 8px;
+            display: flex;
+            column-gap: 5px;
+            align-items: center;
+            font-weight: 600;
+        }
+
+.variables .group .var_detail>.header input {
+    width: 100%;
+}
+
+.variables .group>button {
+    margin: 5px 5px;
+    height: 20px;
+}
+
+.listing .item {
+    margin-bottom: 5px;
+    position: relative;
+    align-items: center;
+}
+
+.listing .item .row2 {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 5px 0 5px
+}
+
+.listing .item:hover span {
+    color: #7fffd4;
+}
+
+.listing .item .row1 {
+    display: flex;
+}
+
+.listing .item:hover .row2 {
+    display: block;
+}
+
+.listing .item:hover .row2 .col2 {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.listing .item .row1 {
+    align-items: center;
+}
+
+.listing .item .row1 .col1 {
+    width: 30px;
+    display: flex;
+}
+
+.listing .item .row1 .col1 span {
+    border: 1px solid #9ba2c2;
+    background: #9ba2c2;
+    padding: 0px 2px;
+    border-radius: 3px;
+    min-width: 16px;
+    text-align: center;
+}
+
+.listing .item .row1 .col2 {
+    display: flex;
+    align-items: center;
+}
+
+.listing .item:hover .row2 button {
+    border-radius: 0;
+    width: 50px;
+}
+
+.listing .item:hover .row2 .col2 input {
+    margin-left: 0;
+}
+
+.listing .item:hover .row2 .col2 .button {
+    display: flex;
+    position: absolute;
+    right: 0;
+}
+
+.template {
+    display: none;
+}
+
+.variables .group .var_detail .existing_vars {
+    max-width: 138px;
+}
+
+.variables .group .var_detail .existing_vargroups {
+    max-width: 85px;
+}
+
+.variables .group>.header button.remove {
+    background: #620f18;
+    border-color: #9e424c;
+    display: none;
+    column-gap: 5px;
+}
