@@ -1,2 +1,0 @@
-(this["webpackJsonplowcode-fe"]=this["webpackJsonplowcode-fe"]||[]).push([[51],{875:function(e,t,o){"use strict";o.r(t);o(276);var n=o(215),a=o.n(n),s=(o(110),o(79)),i=o.n(s),r=o(0),c=o.n(r);t.default=function(e){return c.a.createElement(a.a,{status:"404",title:"Not Found",subTitle:"'Sorry, the page you visited does not exist.",extra:c.a.createElement(i.a,{type:"primary",onClick:function(){e.history.push("/")}},"Back Home")})}}}]);
-//# sourceMappingURL=51.785e6fe7.chunk.js.map
