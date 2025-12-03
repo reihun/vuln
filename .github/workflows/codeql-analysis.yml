@@ -35,8 +35,7 @@ jobs:
         cache: 'maven'  # Cache Maven để nhanh hơn
 
 
-    - name: Build Spring boot 
-      run: ./mvnw -B clean compile
+    
     # THAY THẾ AUTOBUILD BẰNG BUILD MAVEN (skip tests để tránh fail)
     - name: Build with Maven
       run: mvn clean compile -B -DskipTests  # Hoặc 'mvn clean package' nếu cần full build
