@@ -6,8 +6,7 @@ on:
     branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  schedule:
-    - cron: '0 5 * * 0'   # Chạy tự động mỗi Chủ nhật 5h sáng UTC
+  # Chạy tự động mỗi Chủ nhật 5h sáng UTC
 
 jobs:
   codeql:
