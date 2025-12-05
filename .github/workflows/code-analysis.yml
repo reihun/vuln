@@ -1,49 +1,29 @@
-# .github/workflows/codeql-analysis.yml
-name: "CodeQL - JavaScript/TypeScript"
+# .github/workflows/codeql.yml
+name: CodeQL
 
 on:
   push:
-    branches: [ main, master, develop ]
+    branches: [ main, master ]
   pull_request:
-    branches: [ main, master, develop ]
+    branches: [ main, master ]
   schedule:
-    - cron: '30 4 * * 0'  # Chạy tự động mỗi Chủ nhật 4:30 UTC
+    - cron: '0 5 * * 0'   # Chạy tự động mỗi Chủ nhật 5h sáng UTC
 
 jobs:
-  codeql-js:
-    name: CodeQL JavaScript Scan
+  codeql:
     runs-on: ubuntu-latest
     permissions:
-      actions: read
+      security-events: write   # Bắt buộc để upload kết quả
       contents: read
-      security-events: write   # Bắt buộc để upload SARIF
-
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ javascript, typescript ]   # QUAN TRỌNG: phải là javascript/typescript
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # CodeQL hỗ trợ JS/TS mà KHÔNG cần build gì cả
-      # Chỉ cần cài Node để CodeQL extract dependencies (package.json, yarn.lock, etc.)
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20   # hoặc 18, 22 tùy project
-          cache: 'npm'       # hoặc 'yarn', 'pnpm'
 
       - name: Initialize CodeQL
         uses: github/codeql-action/init@v3
         with:
-          languages: ${{ matrix.language }}
-          # Tùy chọn: dùng config file chuyên JS để tìm endpoint, secret, XSS, prototype pollution...
-          config-file: .github/codeql/codeql-config-js.yml
-          # Nếu chưa có config thì bỏ dòng này → CodeQL vẫn scan tốt (dùng default JS queries)
+          languages: javascript   # hoặc: javascript,typescript
 
-      # QUAN TRỌNG: Với JS không dùng autobuild → phải bỏ hoặc comment
-      # - name: Autobuild → XÓA HOÀN TOÀN DÒNG NÀ
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
