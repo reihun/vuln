@@ -1,0 +1,1 @@
+import"./index-By56YbRw.js";import{a,r,b as i}from"./factory-DUJy6-6U.js";function n({classNames:o,styles:l,props:e,stylesCtx:s}){const t=a();return{resolvedClassNames:r({theme:t,classNames:o,props:e,stylesCtx:s||void 0}),resolvedStyles:i({theme:t,styles:l,props:e,stylesCtx:s||void 0})}}export{n as u};
