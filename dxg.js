@@ -40581,7 +40581,7 @@ e);
                         if (this.loader)
                             try {
                                 B ? this.prependTo(this.loader, this.wrapper) : this.removeChildFrom(this.loader, this.wrapper)
-                            } catch (Y) {}
+                            } catch (Y) { console.warn("[Form] Error toggling loader visibility:", Y) }
                     }
                 }
             }, {
@@ -40924,7 +40924,7 @@ e);
                                     }),
                                     this.removeChild(this.alert),
                                     this.alert = null
-                                } catch (ne) {}
+                                } catch (ne) { console.warn("[Form] Error clearing alert element:", ne) }
                             if (N) {
                                 var X = {
                                     class: Y && Y.classes || "alert alert-".concat(B),
@@ -47359,7 +47359,7 @@ e);
                       , Xe = function(ut) {
                         pe ? pe().then(function() {
                             return xe(ut)
-                        }).catch(function() {}) : xe(ut)
+                        }).catch(function(err) { console.warn("[Dialog] Pre-close callback failed:", err) }) : xe(ut)
                     };
                     return this.addEventListener(Ae.refs.dialogOverlay, "click", Xe),
                     this.addEventListener(Ae.refs.dialogClose, "click", Xe),
@@ -54550,7 +54550,7 @@ e);
                         this.refs = {},
                         this.parentComponent.removeChildFrom(this.alert, this.container),
                         this.alert = null
-                    } catch (C) {}
+                    } catch (C) { console.warn("[Component] Error during alert cleanup:", C) }
                 }
             }, {
                 key: "focusOnComponent",
@@ -57891,7 +57891,7 @@ e);
                             this.currencyPrefix && (q = q.replace(this.currencyPrefix, "")),
                             this.currencySuffix && (q = q.replace(this.currencySuffix, "")),
                             (W || B) && !N && !Y && (Number.isNaN(+q) || !q) && (q = "0")
-                        } catch (Q) {}
+                        } catch (Q) { console.warn("[Currency] Error stripping prefix/suffix:", Q) }
                     return q
                 }
             }, {
@@ -77778,7 +77778,7 @@ e);
                     if (this.isJsonValue && M)
                         try {
                             M = JSON.parse(M)
-                        } catch (g) {}
+                        } catch (g) { console.warn("[Editor] Failed to parse JSON value:", g.message) }
                     return M
                 }
             }, {
@@ -92929,7 +92929,7 @@ e);
                     if ((S || !1 === S) && y && o(S) !== o(y) && r.default.isString(y))
                         try {
                             y = JSON.parse(y)
-                        } catch (D) {}
+                        } catch (D) { console.warn("[Condition] Failed to parse compared value as JSON:", D.message) }
                     if (M && M.root) {
                         var C, F = M.root.getComponent(g);
                         if ((F = Array.isArray(F) ? F[0] : F) && (0,
