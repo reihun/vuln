@@ -1,0 +1,38 @@
+# Environment files
+.env
+.env.*
+.env.local
+.env.development
+.env.production
+
+# Secrets and credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+credentials.json
+service-account*.json
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Build cache
+.cache/
+dist/
+tmp/
